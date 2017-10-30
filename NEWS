@@ -1,4 +1,15 @@
 --------------------------------------------------------------------------------
+icesTAF 1.4-1 (2017-10-30)
+--------------------------------------------------------------------------------
+o Added function print.taf() to print TAF table, controlling how NA values are
+  shown.
+
+o Added arguments 'na' and 'sep' to write.taf().
+
+
+
+
+--------------------------------------------------------------------------------
 icesTAF 1.4-0 (2017-10-30)
 --------------------------------------------------------------------------------
 o Added function upload() to upload file to TAF database. Added function

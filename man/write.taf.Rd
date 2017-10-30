@@ -4,8 +4,8 @@
 \alias{write.taf}
 \title{Write TAF Table to File}
 \usage{
-write.taf(x, file = "", quote = FALSE, row.names = FALSE,
-  fileEncoding = "UTF-8", ...)
+write.taf(x, file = "", quote = FALSE, sep = ",", na = "NA",
+  row.names = FALSE, fileEncoding = "UTF-8", ...)
 }
 \arguments{
 \item{x}{a data frame in TAF format.}
@@ -14,11 +14,17 @@ write.taf(x, file = "", quote = FALSE, row.names = FALSE,
 
 \item{quote}{whether to quote strings.}
 
+\item{sep}{column separator string.}
+
+\item{na}{string to use for missing values. Alternatively, a logical where
+\code{TRUE} is interpreted as \code{"NA"} and \code{FALSE} is
+interpreted as \code{""}.}
+
 \item{row.names}{whether to include row names.}
 
 \item{fileEncoding}{character encoding for output file.}
 
-\item{\dots}{passed to \code{write.csv}.}
+\item{\dots}{passed to \code{write.table}.}
 }
 \description{
 Write a TAF table to a file.
@@ -31,12 +37,20 @@ catage <- read.taf("catage.csv")
 file.remove("catage.csv")
 }
 
+x <- data.frame(Year=c(2000,NA), SSB=c(123456,800), Fbar=c(1.234,1.5))
+write.taf(x)
+write.taf(x, na="-")
+write.taf(x, na=FALSE)
+write.taf(x, na=FALSE, sep="\\t")
+
 }
 \seealso{
-\code{\link{write.csv}} is the underlying function used to write a table to a
-file.
+\code{\link{write.table}} is the underlying function used to write a table to
+a file.
 
 \code{\link{read.taf}} reads a TAF table from a file into a data frame.
+
+\code{\link{print.taf}} prints a TAF table.
 
 \code{\link{icesTAF-package}} gives an overview of the package.
 }
