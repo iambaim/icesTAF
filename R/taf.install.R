@@ -27,8 +27,9 @@
 #'
 #' @seealso
 #' \code{\link{taf.bootstrap}} calls \code{\link{download.github}} and
-#' \code{taf.install} to download and install R packages, via
-#' \code{\link{process.bib}}.
+#' \code{taf.install} to download and install R packages.
+#'
+#' \code{\link{taf.library}} loads a package from \verb{bootstrap/library}.
 #'
 #' \code{\link{clean.library}} selectively removes packages from the local TAF
 #' library.
@@ -65,25 +66,13 @@ taf.install <- function(targz=NULL, lib="bootstrap/library", quiet=FALSE)
     pkg <- sub(".*/(.*)_.*", "\\1", tgz)     # path/pkg_sha.tar.gz -> pkg
     sha <- sub(".*_(.*?)\\..*", "\\1", tgz)  # path/pkg_sha.tar.gz -> sha
 
-    if(already.in.taf.library(tgz, lib))
-    {
-      if(!quiet)
-      {
-        message("Skipping install of '", basename(tgz), "'.")
-        message("  Version '", sha, "' is already in ", lib, ".")
-      }
-    }
-    else
+    if(!already.in.taf.library(tgz, lib))
     {
       install.packages(tgz, lib=lib, repos=NULL, quiet=quiet)
-      ## Store RemoteSha in DESCRIPTION
-      desc <- read.dcf(file.path(lib, pkg, "DESCRIPTION"), all=TRUE)
-      desc$RemoteSha <- sha
-      write.dcf(desc, file.path(lib, pkg, "DESCRIPTION"))
-      ## Store RemoteSha in package.rds
-      meta <- readRDS(file.path(lib, pkg, "Meta/package.rds"))
-      meta$DESCRIPTION["RemoteSha"] <- sha
-      saveRDS(meta, file.path(lib, pkg, "Meta/package.rds"))
+    }
+    else if(!quiet)
+    {
+      message("  Skipping install of '", basename(tgz), "' (already in place).")
     }
   }
 }

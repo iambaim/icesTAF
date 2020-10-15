@@ -1,6 +1,6 @@
 
-R version 3.6.1 (2019-07-05) -- "Action of the Toes"
-Copyright (C) 2019 The R Foundation for Statistical Computing
+R version 3.6.3 (2020-02-29) -- "Holding the Windsock"
+Copyright (C) 2020 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -207,6 +207,63 @@ Type 'q()' to quit R.
 > 
 > 
 > cleanEx()
+> nameEx("clean.data")
+> ### * clean.data
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: clean.data
+> ### Title: Clean Data
+> ### Aliases: clean.data
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D clean.data()
+> ## End(Not run)
+> 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("clean.library")
+> ### * clean.library
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: clean.library
+> ### Title: Clean TAF Library
+> ### Aliases: clean.library
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D clean.library()
+> ## End(Not run)
+> 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("clean.software")
+> ### * clean.software
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: clean.software
+> ### Title: Clean TAF Software
+> ### Aliases: clean.software
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D clean.software()
+> ## End(Not run)
+> 
+> 
+> 
+> 
+> cleanEx()
 > nameEx("convert.spaces")
 > ### * convert.spaces
 > 
@@ -279,6 +336,25 @@ Type 'q()' to quit R.
 > ##D deps(dir, list=TRUE)
 > ##D 
 > ##D deps(dir, available=FALSE)  # dependencies that might be unavailable
+> ## End(Not run)
+> 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("detach.packages")
+> ### * detach.packages
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: detach.packages
+> ### Title: Detach Packages
+> ### Aliases: detach.packages
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D detach.packages()
 > ## End(Not run)
 > 
 > 
@@ -525,6 +601,26 @@ Type 'q()' to quit R.
 > 
 > 
 > cleanEx()
+> nameEx("is.r.package")
+> ### * is.r.package
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: is.r.package
+> ### Title: Is R Package
+> ### Aliases: is.r.package
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D is.r.package("bootstrap/software/SAM.tar.gz")
+> ##D is.r.package("bootstrap/software/stockassessment.tar.gz")
+> ## End(Not run)
+> 
+> 
+> 
+> 
+> cleanEx()
 > nameEx("latin1.to.utf8")
 > ### * latin1.to.utf8
 > 
@@ -605,6 +701,32 @@ Type 'q()' to quit R.
 6 1968  36.915 106.373 42.569 12.330
 7 1969   5.434  32.840 31.532 13.641
 8 1970 107.177  42.403 18.547 13.272
+> 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("long2xtab")
+> ### * long2xtab
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: long2xtab
+> ### Title: Convert Long Table to Crosstab Format
+> ### Aliases: long2xtab
+> 
+> ### ** Examples
+> 
+> long2xtab(catage.long)
+           1       2      3      4
+1963  19.347  62.280  7.028  3.519
+1964  13.052  28.541 20.118  4.285
+1965 113.655  58.227 17.646  9.135
+1966 126.508  84.327 29.766  6.153
+1967  60.962  95.275 32.689 11.205
+1968  36.915 106.373 42.569 12.330
+1969   5.434  32.840 31.532 13.641
+1970 107.177  42.403 18.547 13.272
 > 
 > 
 > 
@@ -701,8 +823,6 @@ Type 'q()' to quit R.
 > 
 > ### ** Examples
 > 
-> msg("script.R running...")
-[15:22:16] script.R running...
 > 
 > 
 > 
@@ -750,6 +870,8 @@ Type 'q()' to quit R.
 [1] "1963-1970"
 > period(catage.xtab)
 [1] "1963-1970"
+> period(catage.long)
+[1] "1963-1970"
 > 
 > 
 > 
@@ -773,26 +895,6 @@ Type 'q()' to quit R.
 > 
 > # Shorter and less error-prone than
 > names(catage)[names(catage)=="4"] <- "4+"
-> 
-> 
-> 
-> 
-> cleanEx()
-> nameEx("process.bib")
-> ### * process.bib
-> 
-> flush(stderr()); flush(stdout())
-> 
-> ### Name: process.bib
-> ### Title: Process Metadata
-> ### Aliases: process.bib
-> 
-> ### ** Examples
-> 
-> ## Not run: 
-> ##D process.bib("DATA.bib")
-> ##D process.bib("SOFTWARE.bib")
-> ## End(Not run)
 > 
 > 
 > 
@@ -1103,6 +1205,22 @@ Type 'q()' to quit R.
 > 
 > 
 > cleanEx()
+> nameEx("taf.libPaths")
+> ### * taf.libPaths
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: taf.libPaths
+> ### Title: Add TAF Library Path
+> ### Aliases: taf.libPaths
+> 
+> ### ** Examples
+> 
+> 
+> 
+> 
+> 
+> cleanEx()
 > nameEx("taf.library")
 > ### * taf.library
 > 
@@ -1146,7 +1264,7 @@ Type 'q()' to quit R.
 > ##D 
 > ##D library(lattice)
 > ##D taf.png("mytrellis")
-> ##D zoom(xyplot(1~1))
+> ##D xyplot(1~1)
 > ##D dev.off()
 > ##D 
 > ##D library(ggplot2)
@@ -1154,6 +1272,22 @@ Type 'q()' to quit R.
 > ##D qplot(1, 1)
 > ##D dev.off()
 > ## End(Not run)
+> 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("taf.session")
+> ### * taf.session
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: taf.session
+> ### Title: TAF Session
+> ### Aliases: taf.session
+> 
+> ### ** Examples
+> 
 > 
 > 
 > 
@@ -1340,6 +1474,56 @@ Type 'q()' to quit R.
 > 
 > 
 > cleanEx()
+> nameEx("xtab2long")
+> ### * xtab2long
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: xtab2long
+> ### Title: Convert Crosstab Table to Long Format
+> ### Aliases: xtab2long
+> 
+> ### ** Examples
+> 
+> xtab2long(catage.xtab, names=c("Year","Age","Catch"))
+   Year Age   Catch
+1  1963   1  19.347
+2  1964   1  13.052
+3  1965   1 113.655
+4  1966   1 126.508
+5  1967   1  60.962
+6  1968   1  36.915
+7  1969   1   5.434
+8  1970   1 107.177
+9  1963   2  62.280
+10 1964   2  28.541
+11 1965   2  58.227
+12 1966   2  84.327
+13 1967   2  95.275
+14 1968   2 106.373
+15 1969   2  32.840
+16 1970   2  42.403
+17 1963   3   7.028
+18 1964   3  20.118
+19 1965   3  17.646
+20 1966   3  29.766
+21 1967   3  32.689
+22 1968   3  42.569
+23 1969   3  31.532
+24 1970   3  18.547
+25 1963   4   3.519
+26 1964   4   4.285
+27 1965   4   9.135
+28 1966   4   6.153
+29 1967   4  11.205
+30 1968   4  12.330
+31 1969   4  13.641
+32 1970   4  13.272
+> 
+> 
+> 
+> 
+> cleanEx()
 > nameEx("xtab2taf")
 > ### * xtab2taf
 > 
@@ -1381,8 +1565,9 @@ Type 'q()' to quit R.
 > 
 > xyplot(1~1)
 > zoom(xyplot(1~1))
-> zoom(xyplot(1~1), size=1, axis=0.8)
-> zoom(xyplot(1~1), lab=NULL, axis=NULL)
+> zoom(xyplot(1~1), size=1.2)
+> zoom(xyplot(1~1), axis=0.8)
+> zoom(xyplot(1~1), axis=NULL)
 > 
 > ## Not run: 
 > ##D taf.png("myplot")
@@ -1390,6 +1575,10 @@ Type 'q()' to quit R.
 > ##D dev.off()
 > ##D 
 > ##D taf.png("mytrellis")
+> ##D xyplot(1~1)
+> ##D dev.off()
+> ##D 
+> ##D taf.png("mytrellis_zoom")
 > ##D zoom(xyplot(1~1))
 > ##D dev.off()
 > ## End(Not run)
@@ -1405,7 +1594,7 @@ detaching ‘package:lattice’
 
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  0.376 0.019 0.398 0 0 
+Time elapsed:  0.369 0.004 0.374 0 0 
 > grDevices::dev.off()
 null device 
           1 

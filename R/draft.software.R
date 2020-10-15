@@ -2,8 +2,8 @@
 #'
 #' Create an initial draft version of a \file{SOFTWARE.bib} metadata file.
 #'
-#' @param package name of one or more R packages, or files/folders inside
-#'        \verb{bootstrap/initial/software}.
+#' @param package name of one or more R packages, or files/folders starting with
+#'        the path \verb{bootstrap/initial/software}.
 #' @param author author(s) of the software.
 #' @param year year when this version of the software was released, or the
 #'        publication year of the cited manual/article/etc.
@@ -48,7 +48,8 @@
 #'
 #' This function is especially useful for citing exact versions of R packages on
 #' GitHub. To prepare metadata for software other than R packages, see the
-#' \code{\link{process.bib}} help page for an example.
+#' \href{https://github.com/ices-taf/doc/wiki/Bib-entries}{TAF Wiki} for an
+#' example.
 #'
 #' @seealso
 #' \code{\link{citation}} and \code{\link{packageDescription}} are the
@@ -57,7 +58,7 @@
 #' \code{\link{draft.data}} creates an initial draft version of a
 #' \verb{DATA.bib} metadata file.
 #'
-#' \code{\link{process.bib}} reads and processes metadata entries.
+#' \code{\link{taf.bootstrap}} reads and processes metadata entries.
 #'
 #' \code{\link{icesTAF-package}} gives an overview of the package.
 #'

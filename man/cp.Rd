@@ -4,7 +4,7 @@
 \alias{cp}
 \title{Copy Files}
 \usage{
-cp(from, to, move = FALSE, quiet = TRUE)
+cp(from, to, move = FALSE, ignore = FALSE, overwrite = TRUE, quiet = TRUE)
 }
 \arguments{
 \item{from}{source filenames, e.g. \code{*.csv}.}
@@ -12,6 +12,10 @@ cp(from, to, move = FALSE, quiet = TRUE)
 \item{to}{destination filenames, or directory.}
 
 \item{move}{whether to move instead of copy.}
+
+\item{ignore}{whether to suppress error if source file does not exist.}
+
+\item{overwrite}{whether to overwrite if destination file exists.}
 
 \item{quiet}{whether to suppress messages.}
 }
